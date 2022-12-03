@@ -43,7 +43,7 @@ contract Nonoptimzed {
     }
 
     /**
-     * @dev substracts stored numbers according to the oder in which they are declared
+     * @dev substracts stored numbers according to the order in which they are declared
      */
     function subtractStoredNumber() public view returns (int8) {
         int8 _a = int8(a);
