@@ -3,10 +3,10 @@
 pragma solidity >=0.7.0 <0.9.0;
 
 /**
- * @title Nonoptimzed
+ * @title Nonoptimized
  * @dev A demonstration contract to represents unoptimized code
  */
-contract Nonoptimzed {
+contract Nonoptimized {
     struct Unpacked {
         bool isMarried;
         bytes32 description;
