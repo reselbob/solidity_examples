@@ -32,7 +32,7 @@ contract Optimized {
     }
 
     function getLocation() public pure returns (bytes20) {
-        bytes20 bb = bytes20("bob.jpg");
+        bytes20 bb = bytes20("New York City");
         return (bb);
     }
 
