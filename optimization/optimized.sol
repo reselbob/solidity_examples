@@ -44,7 +44,7 @@ contract Optimzed {
         bytes10 _picture = getPicture();
         bytes20 _location = getLocation();
         bytes32 _description = getLocation();
-        uint8 _age = 69;
+        uint8 _age = 47;
         Packed memory packed;
         packed = Packed(
             _id,
