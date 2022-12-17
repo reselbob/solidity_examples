@@ -9,9 +9,8 @@ contract Unpacked {
     }
 
     NotOptimized example;
-    
+
     function fillStruct() public {
-        NotOptimized memory someStruct = NotOptimized(100, 400, 200);
-        example = someStruct;
+        example = NotOptimized(100, 400, 200);
     }
 }
