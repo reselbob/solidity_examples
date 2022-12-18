@@ -1,8 +1,18 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.7.0 <0.9.0;
+/*
+The purpose of this contract is to demonstrate using events to log
+behavior within the contract.
+
+The contract publishes two public data members:
+
+  - contract_owner of type address
+  - a_struct which is a custom struct of type MyStruct
+
+and a single function named update()
+*/
 
 contract Simple {
-    
     address public contract_owner;
 
     constructor(){
@@ -17,16 +27,21 @@ contract Simple {
 
      MyStruct public a_struct;
 
-    event BeforeIncrement(address indexed _from, MyStruct _value);
-    event AfterIncrement(address indexed _from, MyStruct _value);
+    event BeforeUpdate(address indexed _from, MyStruct _value);
+    event AfterUpdate(address indexed _from, MyStruct _value);
 
-    function updateUint() public {
-        emit BeforeIncrement(msg.sender, a_struct);
+    /**********
+    * The purpose of the function is to update the
+    * the MyStruct struct by incrementing the value
+    * of its members by 1
+    **********/
+    function update() public {
+        emit BeforeUpdate(msg.sender, a_struct);
         a_struct = MyStruct(
             a_struct.number_1 + 1,
             a_struct.number_2 + 1,
             a_struct.number_3 + 1
         );
-        emit AfterIncrement(msg.sender, a_struct);
+        emit AfterUpdate(msg.sender, a_struct);
     }
 }
