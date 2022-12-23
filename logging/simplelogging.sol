@@ -9,9 +9,7 @@ contract SimpleLogging {
 
     function update(uint64 mynum) public {
         emit BeforeUpdate(number_1);
-        emit BeforeUpdate(number_1);
         number_1 = mynum;
-        emit AfterUpdate(number_1);
         emit AfterUpdate(number_1);
     }
 }
