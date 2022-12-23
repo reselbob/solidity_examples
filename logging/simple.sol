@@ -27,8 +27,8 @@ contract Simple {
 
      MyStruct public a_struct;
 
-    event BeforeUpdate(address indexed _from, MyStruct _value);
-    event AfterUpdate(address indexed _from, MyStruct _value);
+    event BeforeUpdate(address indexed sender, MyStruct value);
+    event AfterUpdate(address indexed sender, MyStruct value);
 
     /**********
     * The purpose of the function is to update the
